@@ -21,10 +21,14 @@ gulp.task('connect', function() {
 
 gulp.task('styles', ['clean-styles'], function() {
     return gulp
-        .src('./src/scss/main.scss')
+        .src([
+            'node_modules/bootstrap/scss/bootstrap-reboot.scss',
+            'node_modules/bootstrap/scss/bootstrap-grid.scss',
+            './src/scss/main.scss'
+        ])
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
-        .pipe(concat('styles.css'))
+        .pipe(concat('main.css'))
         .pipe(
             uglifycss({
                 maxLineLen: 80,
