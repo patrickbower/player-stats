@@ -1,8 +1,9 @@
-# Player stats brief
+# Player Statistics Card
 
-A single component brief requiring a development environment setup demonstrate front end development of a statistics card for players.
+A single component brief
 
-This is a simple development workflow as I 'strive to simplify' where possible. The gist of the workflow contains:
+## Tooling and technology
+For this brief my front end development workflow includes:
 
 - Gulp and NPM task running
 - SASS minified and concatenated single CSS with sourcemaps.
@@ -11,7 +12,8 @@ This is a simple development workflow as I 'strive to simplify' where possible. 
 - CLI `gulp` tasks setup to `watch`, `build` and `serve`.
 - Bootstrap v4.0.0-beta (reset and grid only), packages baked into the `styles` gulp task.
 
-Beyond the scope of a single component are additional workflow features such as:
+## Future features
+Beyond the scope of a single component are additional considerations:
 
 - Modular component library
 - JavaScript initialising pattern
@@ -23,3 +25,4 @@ Beyond the scope of a single component are additional workflow features such as:
   - Auto-prefixing
   - Image compression
   - Sprite compiling
+
