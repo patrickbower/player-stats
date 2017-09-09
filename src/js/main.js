@@ -1,2 +1,4 @@
-import * as test from './middleware';
-test.middleware();
+'use strict';
+
+import playerstats from './playerstats.js';
+const PlayerStats = new playerstats();
