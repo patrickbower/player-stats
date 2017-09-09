@@ -5,13 +5,13 @@ import * as middleware from './middleware';
 class PlayerStats {
   constructor(PlayerStats) {
     const stats = middleware.getPlayerstats();
-    stats.then(res => {
-      this.init(res);
+    stats.then(response => {
+      this.init(response);
     })
   }
 
-  init(res) {
-    console.log('init', res);
+  init(response) {
+    console.log('init', response);
   }
 }
 
