@@ -8,17 +8,19 @@
 <body>
     <h1 class="sr-only">Player Stats Card</h1>
     <div class="card">
-        <div class="card__selection">
-            <form action="#">
-                <select name="select-a-player" id="select-a-player">
-                    <option disabled>Select a player</option>
-                    <option value="one">one</option>
-                    <option value="two">two</option>
+        <div class="card__head">
+            <form action="#" class="form">
+              <div class="form__select">
+                <select class="form__select-box" name="select-a-player" id="select-a-player">
+                  <option>Select a player</option>
+                  <option value="one">one</option>
+                  <option value="two">two</option>
                 </select>
-                <button class="sr-only" type="submit" name="select-a-player">Submit</button>
+              </div>
+              <button class="sr-only" type="submit" name="select-a-player">Submit</button>
             </form>
         </div>
-        <div class="card__display">
+        <div class="card__body">
 
         </div>
     </div>

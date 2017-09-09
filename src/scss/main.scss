@@ -1,3 +1,8 @@
-.card {
-    background: #recb00;
-}
+@import '_settings';
+
+@import '_base';
+
+@import '_card';
+@import '_form';
+
+@import '_trumps';
