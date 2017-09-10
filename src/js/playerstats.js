@@ -4,6 +4,7 @@ import * as middleware from './middleware';
 
 class PlayerStats {
   constructor(PlayerStats) {
+
     const stats = middleware.getPlayerStats();
     stats.then(response => {
       this.init(response);
@@ -86,12 +87,8 @@ class PlayerStats {
   }
 
   changePlayer(option) {
-
     document.querySelector(`#${this.activePlayer}`).classList.remove('active');
-
-    const player = document.querySelector(`#${option}`);
-    player.classList.add('active');
-
+    document.querySelector(`#${option}`).classList.add('active');
     this.activePlayer = option;
   }
 
