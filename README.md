@@ -2,6 +2,20 @@
 
 A single component brief
 
+## Quick view project locally
+Download repo, locate the `public` folder on the command line and run `php -S 0.0.0.0:1234` and follow the instructions to view in the browser on `http://0.0.0.0:1234`
+
+## Develop project locally
+Either `clone` or `download` the repo. On the command line run `npm install` on the root directory followed by `gulp build` then `gulp serve` and view on `http://localhost:8080`  
+
+## Overview
+Although the task is complete and working using standards set out in the brief there a couple of notable points I've run out of time to add:
+
+ - Document code using JSdocs
+ - Add polyfills for use in IE11
+ - Add accessibility features (aria-roles)
+
+
 ## Tooling and technology
 For this brief my front end development workflow includes:
 
@@ -11,6 +25,7 @@ For this brief my front end development workflow includes:
 - Local development server startup with livereload.
 - CLI `gulp` tasks setup to `watch`, `build` and `serve`.
 - Bootstrap v4.0.0-beta (reset and grid only), packages baked into the `styles` gulp task.
+
 
 ## Future features
 Beyond the scope of a single component are additional considerations:
@@ -25,4 +40,3 @@ Beyond the scope of a single component are additional considerations:
   - Auto-prefixing
   - Image compression
   - Sprite compiling
-
