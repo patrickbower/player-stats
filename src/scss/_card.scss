@@ -1,12 +1,9 @@
 .card {
-  max-width: 400px;
+  max-width: 360px;
+  color: $colour-white;
 
     &__head {
       padding: $gutter;
       background: $colour-white;
-    }
-
-    &__body {
-      padding: $gutter;
     }
 }

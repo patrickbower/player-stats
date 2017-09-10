@@ -7,7 +7,7 @@ const config = {
   playerstats: 'player-stats.json'
 }
 
-export function getPlayerstats() {
+export function getPlayerStats() {
 
   const url = `${config.api}${config.playerstats}`;
   const rawData =  utils.request(url);
@@ -21,24 +21,21 @@ export function getPlayerstats() {
 
       const slug = `${player.name.first}-${player.name.last}`.toLowerCase();
 
+      var statsCollection = {};
+      stats.map(item => {
+        statsCollection[item.name] = item.value;
+        return statsCollection;
+      })
+
       list[slug] = {
         name: `${player.name.first} ${player.name.last}`,
-        position: player.info.positionInfo.split(' ').pop()
+        id: player.id,
+        position: player.info.positionInfo.split(' ').pop(),
+        stats: statsCollection,
+        teamSlug: `${player.currentTeam.name}`.toLowerCase().replace(' ', '-')
       };
-
-      for (let stat of stats) {
-        if (stat.name === 'appearances') {
-          list[slug].appearances = stat.value
-        }
-        if (stat.name === 'goals') {
-          list[slug].goals = stat.value
-        }
-      }
-
     }
 
-    console.log(list);
-
-    return data.players;
+    return list;
   })
 }

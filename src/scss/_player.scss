@@ -1,0 +1,29 @@
+.player {
+
+  &__img {
+    padding: 20px 10px 0 10px;
+    background: url('../images/background.png') no-repeat center right, $colour-white;
+    background-size: cover;
+  }
+
+  &__profile {
+    padding: $gutter $gutter 5px $gutter;
+    background: $colour-red-ribbon;
+  }
+
+  &__stats {
+    font-size: 18px;
+  }
+
+  &__badge {
+    margin-top: -65px;
+    float: right;
+    background: $colour-white;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    text-align: center;
+    padding-top: 10px;
+  }
+}

@@ -1,0 +1,12 @@
+.icon {
+  display: inline-block;
+  background: url('../images/badges_sprite.png') no-repeat;
+  transform: scale(0.75);
+}
+
+.icon--tottenham-hotspur {
+	background-position: -525px -1001px;
+	width: 48px;
+	height: 98px;
+  margin-top: -10px;
+}
