@@ -11,10 +11,8 @@
         <div class="card__head">
             <form action="#" class="form">
               <div class="form__select">
-                <select class="form__select-box" name="select-a-player" id="select-a-player">
-                  <option>Select a player</option>
-                  <option value="one">one</option>
-                  <option value="two">two</option>
+                <select class="form__select-box js-select" name="select-a-player" id="select-a-player">
+                  <option disabled>Select a player</option>
                 </select>
               </div>
               <button class="sr-only" type="submit" name="select-a-player">Submit</button>
@@ -23,8 +21,12 @@
         <div class="card__body js-card"></div>
     </div>
 
+    <template class="js-select-template">
+      <option value="{value}">{name}</option>
+    </template>
+
     <template class="js-player-template">
-      <div class="player">
+      <div class="player" id="{player-slug}">
         <div class="player__img">
           <img src="../images/p{id}.png" alt="">
         </div>
@@ -36,7 +38,7 @@
             </div>
             <div class="col-4">
               <div class="player__badge">
-                <span class="icon icon--{teamSlug}"></span>
+                <span class="icon icon--{team-slug}"></span>
               </div>
             </div>
           </div>

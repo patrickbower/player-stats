@@ -10,57 +10,95 @@ class PlayerStats {
     })
 
     this.config = {
-      template: '.js-player-template',
+      playerTemplate: '.js-player-template',
+      selectTemplate: '.js-select-template',
       player: '.js-player',
-      card: '.js-card'
+      card: '.js-card',
+      select: '.js-select',
     }
+
+    this.activePlayer = 'toby-alderweireld';
   }
 
   init(response) {
     this.statsData = response;
-    this.getTemplate();
-    // this.setTemplate();
-    this.render();
+    this.getPlayerTemplate();
+    this.getSelectTemplate();
+    this.renderPlayers();
+    this.renderSelect();
+    this.bind();
+    this.start();
   }
 
-  getTemplate() {
-    this.template = document.querySelector(this.config.template).innerHTML;
+  getPlayerTemplate() {
+    this.playerTemplate = document.querySelector(this.config.playerTemplate).innerHTML;
   }
 
-  // setTemplate() {
-  //   const card = document.querySelector(this.config.card);
-  //   card.insertAdjacentHTML('afterbegin', this.template);
-  // }
+  getSelectTemplate() {
+    this.selectTemplate = document.querySelector(this.config.selectTemplate).innerHTML;
+  }
 
-  render() {
-    // const data = this.statsData
-    // for (let player in data) {
-    //   console.log(player);
-    //   console.log(data[player]);
-    // }
-
-    var listHtml = '';
-
+  renderPlayers() {
+    let playersHTML = '';
     const data = this.statsData
 
     for (var player in data) {
-      console.log(data[player]);
-      listHtml += this.template
+      playersHTML += this.playerTemplate
         .replace(/{name}/g, data[player]['name'])
         .replace(/{position}/g, data[player]['position'])
         .replace(/{appearances}/g, data[player].stats['appearances'])
         .replace(/{goals}/g, data[player].stats['goals'])
         .replace(/{assists}/g, data[player].stats['goal_assist'] || 0)
-        .replace(/{gpm}/g, Math.floor(data[player].stats['goals'] / data[player].stats['appearances']))
-        .replace(/{ppm}/g, Math.floor(data[player].stats['backward_pass'] + data[player].stats['fwd_pass'] / data[player].stats['mins_played']))
+        .replace(/{gpm}/g, (data[player].stats['goals'] / data[player].stats['appearances']).toFixed(1) )
+        .replace(/{ppm}/g, (data[player].stats['mins_played'] / (data[player].stats['backward_pass'] + data[player].stats['fwd_pass'])).toFixed(1))
         .replace(/{id}/g, data[player]['id'])
-        .replace(/{teamSlug}/g, data[player]['teamSlug'])
+        .replace(/{team-slug}/g, data[player]['teamSlug'])
+        .replace(/{player-slug}/g, data[player]['slug'])
     }
 
     const card = document.querySelector(this.config.card);
-    card.insertAdjacentHTML('afterbegin', listHtml);
-
+    card.insertAdjacentHTML('afterbegin', playersHTML);
   }
+
+  renderSelect() {
+    let selectHTML = '';
+    const data = this.statsData
+
+    for (var player in data) {
+      selectHTML += this.selectTemplate
+        .replace(/{value}/g, data[player]['slug'])
+        .replace(/{name}/g, data[player]['name'])
+    }
+
+    const select = document.querySelector(this.config.select);
+    select.insertAdjacentHTML('beforeend', selectHTML);
+  }
+
+  bind() {
+    const instance = this;
+
+    const select = document.querySelector(this.config.select);
+    select.addEventListener('change', function(event) {
+      event.preventDefault();
+      var selectedOption = this[this.selectedIndex];
+      instance.changePlayer(selectedOption.value);
+    });
+  }
+
+  changePlayer(option) {
+
+    document.querySelector(`#${this.activePlayer}`).classList.remove('active');
+
+    const player = document.querySelector(`#${option}`);
+    player.classList.add('active');
+
+    this.activePlayer = option;
+  }
+
+  start() {
+    document.querySelector(`#${this.activePlayer}`).classList.add('active');
+  }
+
 }
 
 export default PlayerStats;

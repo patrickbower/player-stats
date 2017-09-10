@@ -29,6 +29,7 @@ export function getPlayerStats() {
 
       list[slug] = {
         name: `${player.name.first} ${player.name.last}`,
+        slug: slug,
         id: player.id,
         position: player.info.positionInfo.split(' ').pop(),
         stats: statsCollection,

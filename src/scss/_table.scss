@@ -1,16 +1,17 @@
 .table {
   width: 100%;
   border-collapse: separate;
-  border-spacing: 0 10px;
+  border-spacing: 0 2px;
   white-space: nowrap;
 
   &__row {
     width: 100%;
+    box-shadow: 0 0 50px 0 rgba($colour-black, 0.25)
   }
 
   &__cell {
-    background: $colour-white;
-    color: $colour-black;
+    background: $colour-iron;
+    color: $colour-valentino;
     width: 50%;
     padding: 10px;
 
