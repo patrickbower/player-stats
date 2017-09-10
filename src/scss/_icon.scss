@@ -2,11 +2,37 @@
   display: inline-block;
   background: url('../images/badges_sprite.png') no-repeat;
   transform: scale(0.75);
-}
-
-.icon--tottenham-hotspur {
-	background-position: -525px -1001px;
-	width: 48px;
-	height: 98px;
   margin-top: -10px;
+
+  &--tottenham-hotspur {
+    background-position: -525px -1001px;
+    width: 48px;
+    height: 98px;
+  }
+
+  &--manchester-city {
+    background-position: -800px -700px;
+    width: 100px;
+    height: 100px;
+  }
+
+  &--manchester-united {
+    background-position: -601px -800px;
+    width: 98px;
+    height: 99px;
+  }
+
+  &--arsenal {
+    background-position: -107px -100px;
+    width: 86px;
+    height: 100px;
+  }
+
+  &--leicester-city {
+    background-position: 0 0;
+    width: 100px;
+    height: 100px;
+  }
+
+
 }
