@@ -3,7 +3,7 @@
 A single component brief
 
 ## Quick view
-`https://patrickbower.github.io/player-stats/public/` in the browser.
+[https://patrickbower.github.io/player-stats/public/](https://patrickbower.github.io/player-stats/public/) in the browser.
 
 ## Run project locally
 Either `clone` or `download` the repo. On the command line run `npm install` on the root directory followed by `gulp build` then `gulp serve` and view on `http://localhost:8080`  
