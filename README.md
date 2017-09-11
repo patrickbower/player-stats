@@ -3,7 +3,7 @@
 A single component brief
 
 ## Quick view project locally
-Download repo, locate the `public` folder on the command line and run `php -S 0.0.0.0:1234` and follow the instaructions to view in the browser on `http://0.0.0.0:1234`
+Download repo, locate the `public` folder on the command line and run `php -S 0.0.0.0:1234` and follow the instructions to view in the browser on `http://0.0.0.0:1234`
 
 ## Develop project locally
 Either `clone` or `download` the repo. On the command line run `npm install` on the root directory followed by `gulp build` then `gulp serve` and view on `http://localhost:8080`  
@@ -12,7 +12,7 @@ Either `clone` or `download` the repo. On the command line run `npm install` on 
 Although the task is complete and working using standards set out in the brief there a couple of notable points I've run out of time to add:
 
  - Document code using JSdocs
- - Add pollyfill's for use in IE11
+ - Add polyfills for use in IE11
  - Add accessibility features (aria-roles)
 
 
