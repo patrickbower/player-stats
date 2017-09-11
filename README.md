@@ -3,7 +3,7 @@
 A single component brief
 
 ## Overview
-Although the task is complete and working using standards set out in the brief there a couple of notable points I've run out of time to do:
+Although the task is complete and working using standards set out in the brief there a couple of notable points I've run out of time to add:
 
  - Document code using JSdocs
  - Add pollyfill's for use in IE11
