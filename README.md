@@ -2,10 +2,10 @@
 
 A single component brief
 
-## Quick view project locally
-Download repo, locate the `public` folder on the command line and run `php -S 0.0.0.0:1234` and follow the instructions to view in the browser on `http://0.0.0.0:1234`
+## Quick view
+`https://patrickbower.github.io/player-stats/public/` in the browser.
 
-## Develop project locally
+## Run project locally
 Either `clone` or `download` the repo. On the command line run `npm install` on the root directory followed by `gulp build` then `gulp serve` and view on `http://localhost:8080`  
 
 ## Overview
