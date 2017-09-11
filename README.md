@@ -2,6 +2,14 @@
 
 A single component brief
 
+## Overview
+Although the task is complete and working using standards set out in the brief there a couple of notable points I've run out of time to do:
+
+ - Document code using JSdocs
+ - Add pollyfill's for use in IE11
+ - Add accessibility features (aria-roles)
+
+
 ## Tooling and technology
 For this brief my front end development workflow includes:
 
@@ -11,6 +19,7 @@ For this brief my front end development workflow includes:
 - Local development server startup with livereload.
 - CLI `gulp` tasks setup to `watch`, `build` and `serve`.
 - Bootstrap v4.0.0-beta (reset and grid only), packages baked into the `styles` gulp task.
+
 
 ## Future features
 Beyond the scope of a single component are additional considerations:
@@ -25,4 +34,3 @@ Beyond the scope of a single component are additional considerations:
   - Auto-prefixing
   - Image compression
   - Sprite compiling
-

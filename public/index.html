@@ -10,71 +10,71 @@
     <div class="card">
         <div class="card__head">
             <form action="#" class="form">
-              <div class="form__select">
-                <select class="form__select-box js-select" name="select-a-player" id="select-a-player">
-                  <option disabled>Select a player</option>
-                </select>
-              </div>
-              <button class="sr-only" type="submit" name="select-a-player">Submit</button>
+                <div class="form__select">
+                    <select class="form__select-box js-select" name="select-a-player" id="select-a-player">
+                        <option disabled>Select a player</option>
+                    </select>
+                </div>
+                <button class="sr-only" type="submit" name="select-a-player">Submit</button>
             </form>
         </div>
         <div class="card__body js-card"></div>
     </div>
 
     <template class="js-select-template">
-      <option value="{value}">{name}</option>
+        <option value="{value}">{name}</option>
     </template>
 
     <template class="js-player-template">
-      <div class="player" id="{player-slug}">
-        <div class="player__img">
-          <img src="../images/p{id}.png" alt="">
-        </div>
-        <div class="player__profile">
-          <div class="row">
-            <div class="col-8">
-              <h2>{name}</h2>
-              <h3>{position}</h3>
+        <div class="player" id="{player-slug}">
+            <div class="player__img">
+                <img src="../images/p{id}.png" alt="">
             </div>
-            <div class="col-4">
-              <div class="player__badge">
-                <span class="icon icon--{team-slug}"></span>
-              </div>
+            <div class="player__profile">
+                <div class="row">
+                    <div class="col-8">
+                        <h2>{name}</h2>
+                        <h3>{position}</h3>
+                    </div>
+                    <div class="col-4">
+                        <div class="player__badge">
+                            <span class="icon icon--{team-slug}"></span>
+                        </div>
+                    </div>
+                </div>
+                <table class="table player__stats">
+                    <legend class="sr-only">player statistics</legend>
+                    <thead class="sr-only">
+                        <tr>
+                            <th>type</th>
+                            <th>statistic</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table__row">
+                            <td class="table__cell">Appearances</td>
+                            <td class="table__cell table__cell--right">{appearances}</td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__cell">Goals</td>
+                            <td class="table__cell table__cell--right">{goals}</td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__cell">Assists</td>
+                            <td class="table__cell table__cell--right">{assists}</td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__cell">Goals per match</td>
+                            <td class="table__cell table__cell--right">{gpm}</td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__cell">Passes per minute</td>
+                            <td class="table__cell table__cell--right">{ppm}</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-          </div>
-          <table class="table player__stats">
-            <legend class="sr-only">player statistics</legend>
-            <thead class="sr-only">
-              <tr>
-                <th>type</th>
-                <th>statistic</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="table__row">
-                <td class="table__cell">Appearances</td>
-                <td class="table__cell table__cell--right">{appearances}</td>
-              </tr>
-              <tr class="table__row">
-                <td class="table__cell">Goals</td>
-                <td class="table__cell table__cell--right">{goals}</td>
-              </tr>
-              <tr class="table__row">
-                <td class="table__cell">Assists</td>
-                <td class="table__cell table__cell--right">{assists}</td>
-              </tr>
-              <tr class="table__row">
-                <td class="table__cell">Goals per match</td>
-                <td class="table__cell table__cell--right">{gpm}</td>
-              </tr>
-              <tr class="table__row">
-                <td class="table__cell">Passes per minute</td>
-                <td class="table__cell table__cell--right">{ppm}</td>
-              </tr>
-            </tbody>
-          </table>
         </div>
-      </div>
     </template>
 
     <script src="scripts/main.js" defer></script>
